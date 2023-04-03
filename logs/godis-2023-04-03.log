@@ -1,0 +1,4 @@
+[ERROR][main.go:39] 2023/04/03 11:46:20 listen tcp 0.0.0.0:6379: bind: address already in use
+[INFO][server.go:33] 2023/04/03 11:47:05 start listen
+[INFO][server.go:41] 2023/04/03 11:48:38 shutting down
+[INFO][echo.go:64] 2023/04/03 11:48:38 handler shutting down
