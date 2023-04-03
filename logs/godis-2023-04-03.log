@@ -2,3 +2,6 @@
 [INFO][server.go:33] 2023/04/03 11:47:05 start listen
 [INFO][server.go:41] 2023/04/03 11:48:38 shutting down
 [INFO][echo.go:64] 2023/04/03 11:48:38 handler shutting down
+[INFO][server.go:33] 2023/04/03 19:27:59 start listen
+[INFO][server.go:41] 2023/04/03 19:28:03 shutting down
+[INFO][echo.go:64] 2023/04/03 19:28:03 handler shutting down

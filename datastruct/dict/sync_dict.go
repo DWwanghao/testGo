@@ -6,6 +6,10 @@ type SyncDict struct {
 	m sync.Map
 }
 
+func (dict *SyncDict) Clear() {
+	*dict = *MakeSyncDict()
+}
+
 func (dict *SyncDict) Get(key string) (val interface{}, exists bool) {
 	val, ok := dict.m.Load(key)
 	return val, ok
@@ -97,10 +101,6 @@ func (dict *SyncDict) RandomDistinctKeys(limit int) []string {
 		return true
 	})
 	return result
-}
-
-func (dict *SyncDict) clear() {
-	*dict = *MakeSyncDict()
 }
 
 func MakeSyncDict() *SyncDict {

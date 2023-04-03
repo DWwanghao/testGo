@@ -5,6 +5,7 @@ import (
 	"os"
 	"pero-redis/config"
 	"pero-redis/lib/logger"
+	"pero-redis/resp/handler"
 	"pero-redis/tcp"
 )
 
@@ -34,7 +35,7 @@ func main() {
 		config.Properties = defaultProperties
 	}
 	err := tcp.ListenAndServeWithSignal(&tcp.Config{Address: fmt.Sprintf("%s:%d", config.Properties.Bind,
-		config.Properties.Port)}, tcp.MakeHandler())
+		config.Properties.Port)}, handler.MakeHandler())
 	if err != nil {
 		logger.Error(err)
 	}
